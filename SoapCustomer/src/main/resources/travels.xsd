@@ -4,7 +4,7 @@
     <xs:element name="getCustomerRequest">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="name" type="xs:string" minOccurs="0" nillable="true" default="from XSD" />
+                <xs:element name="id" type="xs:long" minOccurs="0" nillable="true" default="1" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>

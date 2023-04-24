@@ -26,7 +26,7 @@ public class TravelEndpoint {
     GetCustomerResponse response = new GetCustomerResponse();
 
     customerJpa = restTemplate.getForObject(
-          "http://localhost:8080/people/" + request.getName().getValue(), CustomerJPA.class);
+          "http://localhost:8080/people/" + request.getId().getValue(), CustomerJPA.class);
 
     Customer customer = new Customer();
     customer.setName(customerJpa.getFirstName());
