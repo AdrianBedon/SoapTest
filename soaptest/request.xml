@@ -1,8 +1,0 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gs="http://stackoverflow.com/greeting-soap/">
-  <soapenv:Header/>
-  <soapenv:Body>
-    <gs:getGreetingRequest>
-      <gs:name>Joe</gs:name>
-    </gs:getGreetingRequest>
-  </soapenv:Body>
-</soapenv:Envelope>
