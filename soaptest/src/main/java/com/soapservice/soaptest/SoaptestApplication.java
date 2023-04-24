@@ -11,6 +11,9 @@ import org.springframework.ws.transport.http.MessageDispatcherServlet;
 import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
 import org.springframework.xml.xsd.SimpleXsdSchema;
 import org.springframework.xml.xsd.XsdSchema;
+import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.web.client.RestTemplate;
+
 
 @EnableWs
 @SpringBootApplication
@@ -43,5 +46,10 @@ public class SoaptestApplication {
     @Bean
     public XsdSchema travelsSchema() {
         return new SimpleXsdSchema(new ClassPathResource("travels.xsd"));
+    }
+
+    @Bean
+    public RestTemplate restTemplate(RestTemplateBuilder builder) {
+        return builder.build();
     }
 }
