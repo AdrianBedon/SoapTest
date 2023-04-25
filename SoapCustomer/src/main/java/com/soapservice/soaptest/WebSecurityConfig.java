@@ -18,7 +18,9 @@ public class WebSecurityConfig{
     
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-            http.authorizeHttpRequests().requestMatchers("/**").hasRole("USER").and().formLogin();
+            http.csrf().disable().authorizeRequests().anyRequest().authenticated()
+                .and()
+                .httpBasic();
             return http.build();
     }
 
